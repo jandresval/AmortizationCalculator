@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCAP.Nova.Calculators.MVCAmortizationCalculator", "MCAP.Nova.Calculators.MVCAmortizationCalculator\MCAP.Nova.Calculators.MVCAmortizationCalculator.csproj", "{B3CC98BD-622F-4500-854F-072CEBEE7E24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCAP.Nova.Calculators.MVCAmortizationCalculator.Tests", "MCAP.Nova.Calculators.MVCAmortizationCalculator.Tests\MCAP.Nova.Calculators.MVCAmortizationCalculator.Tests.csproj", "{AD505B02-A8F2-4869-B7EA-B04212576910}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCAP.Nova.Calculators.WebAPIAmortizationCalculatorTests", "MCAP.Nova.Calculators.WebAPIAmortizationCalculatorTests\MCAP.Nova.Calculators.WebAPIAmortizationCalculatorTests.csproj", "{45202C31-CC8F-4562-9275-184DD0A577B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCAP.Nova.Calculators.WebAPIAmortizationCalculator", "MCAP.Nova.Calculators.WebAPIAmortizationCalculator\MCAP.Nova.Calculators.WebAPIAmortizationCalculator.csproj", "{0B9C83B4-E851-4EC6-9D55-F7F722F54865}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3CC98BD-622F-4500-854F-072CEBEE7E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3CC98BD-622F-4500-854F-072CEBEE7E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3CC98BD-622F-4500-854F-072CEBEE7E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3CC98BD-622F-4500-854F-072CEBEE7E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD505B02-A8F2-4869-B7EA-B04212576910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD505B02-A8F2-4869-B7EA-B04212576910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD505B02-A8F2-4869-B7EA-B04212576910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD505B02-A8F2-4869-B7EA-B04212576910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45202C31-CC8F-4562-9275-184DD0A577B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45202C31-CC8F-4562-9275-184DD0A577B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45202C31-CC8F-4562-9275-184DD0A577B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45202C31-CC8F-4562-9275-184DD0A577B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B9C83B4-E851-4EC6-9D55-F7F722F54865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B9C83B4-E851-4EC6-9D55-F7F722F54865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B9C83B4-E851-4EC6-9D55-F7F722F54865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B9C83B4-E851-4EC6-9D55-F7F722F54865}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,76 @@
+﻿@model MCAP.Nova.Calculators.MVCAmortizationCalculator.Models.AmortizationInformation
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Share/_LayoutPage.cshtml";
+}
+
+<div class="container">
+    <br />
+
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { data_toggle = "validator", role = "form" }))
+    {
+        Html.EnableClientValidation(true);
+        <div class="form_border">
+            <div class="form-group has-feedback">
+                @Html.LabelFor(m => m.dblMonthlyPaymentAmount, new { htmlAttributes = new { @class = "control-label" } })
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    @Html.EditorFor(m => m.dblMonthlyPaymentAmount, new { htmlAttributes = new { @type = "number", @class = "form-control", @placeholder = "0.00", required = "required", step = "any", min = 1, max = 999999999999 } })
+                </div>
+                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                <div class="help-block with-errors">
+                    @Html.ValidationMessageFor(m => m.dblMonthlyPaymentAmount)
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                @Html.LabelFor(m => m.dblOutstandingBalance, new { htmlAttributes = new { @class = "control-label" } })
+                <div class="input-group">
+                    <span class="input-group-addon">$</span>
+                    @Html.EditorFor(m => m.dblOutstandingBalance, new { htmlAttributes = new { @type = "number", @class = "form-control", @placeholder = "0.00", required = "required", step = "any", min = 1, max = 999999999999 } })
+                </div>
+                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                <div class="help-block with-errors">
+                    @Html.ValidationMessageFor(m => m.dblOutstandingBalance)
+                </div>
+            </div>
+            <div class="form-group has-feedback">
+                @Html.LabelFor(m => m.dblInterestRate, new { htmlAttributes = new { @class = "control-label" } })
+                <div class="input-group">
+                    @Html.EditorFor(m => m.dblInterestRate, new { htmlAttributes = new { @type = "number", @class = "form-control", @placeholder = "0.00", required = "required", step = "any", min = 0, max = 999 } })
+                    <span class="input-group-addon">%</span>
+                </div>
+                <div class="help-block with-errors">
+                    @Html.ValidationMessageFor(m => m.dblInterestRate)
+                </div>
+            </div>
+            @if (Model != null && Model.dblRemainingAmortization != 0)
+            {
+                <div class="alert alert-success success_message">
+                    @Html.LabelFor(m => m.dblRemainingAmortization, new { htmlAttributes = new { @class = "control-label" } })<strong>:</strong>
+                    @Html.DisplayTextFor(m => m.dblRemainingAmortization)
+                    @ViewBag.Months
+                    @if (!string.IsNullOrEmpty(ViewBag.Years))
+                    {
+                        <text>
+                        &cong; @ViewBag.Years
+                        </text>
+                    }
+                </div>
+            }
+            @if (!string.IsNullOrEmpty(ViewBag.Error))
+            {
+                <div class="alert alert-danger error_message">
+                    @ViewBag.Error
+                </div>
+            }
+        </div>
+        <br />
+                <div class="form-group form_action_area">
+                    <button class="btn btn-primary" type="submit">
+                        Calculate
+                    </button>
+                    @Html.ActionLink("Clear", "Index", "Home", null, new { @class = "btn btn-primary" })
+                </div>
+    }
+</div>

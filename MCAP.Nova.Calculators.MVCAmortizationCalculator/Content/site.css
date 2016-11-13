@@ -1,0 +1,36 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.form_border {
+    border: 2px solid #265a88;
+    padding: 20px 40px 20px 40px;
+}
+
+.form_action_area {
+    /*border:2px solid #000;*/
+    padding: 0 0px 0px 30px !important;
+}
+
+footer {
+    font-size: small;
+    font-style:italic;
+}
+
+.nav_site_bar {
+    background-color: #252149 !important;
+}
+
+.success_message {
+    border: 1px solid #115a3d !important;
+}
+
+.error_message {
+    border: 1px solid #800c0c !important;
+}
